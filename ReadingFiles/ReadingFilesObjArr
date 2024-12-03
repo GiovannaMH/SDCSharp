@@ -80,7 +80,7 @@ namespace ReadingFilesObjArr
 
                 // Example: Calculate the average income
                 double averageIncome = CalculateAverageIncome(people);
-                Console.WriteLine($"\nAverage Income: {averageIncome:C}");
+                Console.WriteLine($"\nAverage Income: {averageIncome:C}"); //:C - Currency Format; by default, it uses the system's regional settings.
             }
             else
             {
