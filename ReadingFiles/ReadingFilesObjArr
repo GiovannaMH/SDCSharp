@@ -1,0 +1,93 @@
+/*
+ * Steps:
+- Create a Person class with name, age, and income attributes and a method PresentYourself.
+- In the main program:
+  > Read values from a CSV file.
+  > Create an array of Person objects using the values from the file.
+  > Perform some operation on the array (e.g., calculate the average income or print the details of each person). 
+ */
+
+using System;
+using System.IO;
+
+namespace ReadingFilesObjArr
+{
+    // Define the Person class
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public double Income { get; set; }
+
+        public Person(string name, int age, double income)
+        {
+            Name = name;
+            Age = age;
+            Income = income;
+        }
+
+        public void PresentYourself()
+        {
+            Console.WriteLine($"Hi, I am {Name}, {Age} years old, and I earn {Income:C}.");
+        }
+    }
+
+    internal class Program
+    {
+        // Method to calculate the average income
+        static double CalculateAverageIncome(Person[] people)
+        {
+            double totalIncome = 0;
+
+            foreach (Person person in people)
+            {
+                totalIncome += person.Income;
+            }
+
+            return totalIncome / people.Length;
+        }
+        static void Main(string[] args)
+        {
+            string fileName = "../../../../people.csv";
+
+            if (File.Exists(fileName))
+            {
+                string[] lines = File.ReadAllLines(fileName);
+
+                // Skip the header line
+                int arraySize = lines.Length - 1;
+                Person[] people = new Person[arraySize];
+
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    string[] values = lines[i].Split(',');
+
+                    // Parse the values from each line
+                    string name = values[0];
+                    int age = int.Parse(values[1]);
+                    double income = double.Parse(values[2]);
+
+                    // Create a Person object and add it to the array
+                    people[i - 1] = new Person(name, age, income);
+                }
+
+                // Do something with the array
+                Console.WriteLine("\nDetails of all people:");
+                foreach (Person person in people)
+                {
+                    person.PresentYourself();
+                }
+
+                // Example: Calculate the average income
+                double averageIncome = CalculateAverageIncome(people);
+                Console.WriteLine($"\nAverage Income: {averageIncome:C}");
+            }
+            else
+            {
+                Console.WriteLine("File not found.");
+            }
+        }
+
+        
+    }
+}
