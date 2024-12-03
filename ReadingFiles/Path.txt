@@ -14,4 +14,5 @@ MyProject
 To read `example.txt` from the project folder, you can construct the path dynamically:
 ```csharp
 string fileName = "../../../example.txt"; 
+```
 
