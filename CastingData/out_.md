@@ -117,11 +117,7 @@ if (int.TryParse(line, out int number))
 
 ---
 
-### Summary
-- **`int.TryParse(line, out _)`** checks if `line` is a valid integer without storing the parsed value.
-- It's perfect for scenarios where only the success of the conversion matters, not the result itself.
-
----
+### Another example:
 ```
     static void Main(string[] args)
     {
@@ -175,4 +171,8 @@ if (int.TryParse(line, out int number))
         }
     }
 ```
-Another example:
+### Summary
+- **`int.TryParse(line, out _)`** checks if `line` is a valid integer without storing the parsed value.
+- It's perfect for scenarios where only the success of the conversion matters, not the result itself.
+
+---
