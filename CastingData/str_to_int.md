@@ -102,5 +102,3 @@ else
 ### Summary
 - **`int.TryParse`** is used to attempt parsing a string into an integer safely.
 - It returns `true` for valid numbers, assigns the converted value to the `out` variable, and lets the program continue smoothly without exceptions for invalid input.
-
-Let me know if you want further clarification or examples!
