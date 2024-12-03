@@ -87,7 +87,5 @@ namespace ReadingFilesObjArr
                 Console.WriteLine("File not found.");
             }
         }
-
-        
     }
 }
