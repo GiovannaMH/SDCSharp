@@ -4,7 +4,13 @@
  * However, you need to handle type conversion carefully when retrieving and using those items.
  * 
  * Example: Storing Different Types in a List<object>
- * A better version of this is usong a Class.
+ * A better version of this is using a Class.
+        class Person
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public double Income { get; set; }
+        }
  * 
  * */
 using System;
@@ -48,3 +54,4 @@ namespace Lists2
         }
     }
 }
+
