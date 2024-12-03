@@ -9,7 +9,7 @@ namespace ReadingFiles4
         {
             //string fileName = "example.txt"; // by default the path is:
             //'C:\Users\GiovannaHumphries\source\repos\ReadingFromFiles\Ex1\bin\Debug\net7.0\example.txt'
-            string fileName = "../../../../numbers.txt"; // if the file is created in the Project folder, where the .cs file is
+            string fileName = "../../../../numbers1.txt"; // if the file is created in the Project folder, where the .cs file is
 
             if (System.IO.File.Exists(fileName))
             {
@@ -21,28 +21,13 @@ namespace ReadingFiles4
                 Console.WriteLine("File not found.");
             }
 
-            string fileNum = "../../../../numbers.txt";
-            string[] lines = System.IO.File.ReadAllLines(fileNum);
+            string[] lines = System.IO.File.ReadAllLines(fileName);
 
             foreach (string line in lines)
             {
                 if (int.TryParse(line, out int number))
                 {
-                    Console.WriteLine($"Number: {number}");
-                }
-                else
-                {
-                    Console.WriteLine($"Invalid data: {line}");
-                }
-            }
-
-            lines = System.IO.File.ReadAllLines(fileNum);
-
-            foreach (string line in lines)
-            {
-                if (int.TryParse(line, out int number))
-                {
-                    Console.WriteLine($"Number: {number}");
+                    Console.WriteLine($"Number: {number*2}");
                 }
                 else
                 {
