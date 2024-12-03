@@ -4,7 +4,7 @@
 - In the main program:
   > Read values from a CSV file.
   > Create an array of Person objects using the values from the file.
-  > Perform some operation on the array (e.g., calculate the average income or print the details of each person). 
+  > Perform some operations on the array (e.g., calculate the average income or print the details of each person). 
  */
 
 using System;
