@@ -29,7 +29,7 @@ namespace ReadingFiles7
             // Create a list to collect valid numbers
             List<int> numberList = new List<int>();
 
-            // Second foreach loop to process numbers and store them in a list
+            // foreach loop to process numbers and store them in a list
             foreach (string line in lines)
             {
                 if (int.TryParse(line, out int number))
