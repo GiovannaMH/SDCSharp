@@ -14,42 +14,52 @@ namespace ReadingFiles7
             // Adjust the file path to point to the project folder
             string fileName = "../../../../numbers1.txt";
 
-            if (System.IO.File.Exists(fileName))
-            {
-                string content = System.IO.File.ReadAllText(fileName);
-                Console.WriteLine(content);
-            }
-            else
+            if (!System.IO.File.Exists(fileName))
             {
                 Console.WriteLine("File not found.");
             }
-
-            string[] lines = System.IO.File.ReadAllLines(fileName);
-
-            // Create a list to collect valid numbers
-            List<int> numberList = new List<int>();
-
-            // foreach loop to process numbers and store them in a list
-            foreach (string line in lines)
+            else
             {
-                if (int.TryParse(line, out int number))
-                {
-                    numberList.Add(number); // Add valid numbers to the list
-                }
-                else
-                {
-                    Console.WriteLine($"Invalid data: {line}");
-                }
-            }
+                string[] lines = System.IO.File.ReadAllLines(fileName);
 
-            // Convert the list to an array
-            int[] numberArray = numberList.ToArray();
+                // First foreach loop to print numbers and invalid data
+                foreach (string line in lines)
+                {
+                    if (int.TryParse(line, out int number))
+                    {
+                        Console.WriteLine($"Number: {number}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid data: {line}");
+                    }
+                }
 
-            // Print the array to verify
-            Console.WriteLine("\nArray of numbers:");
-            foreach (int num in numberArray)
-            {
-                Console.WriteLine(num);
+                // Create a list to collect valid numbers
+                List<int> numberList = new List<int>();
+
+                // Second foreach loop to process numbers and store them in a list
+                foreach (string line in lines)
+                {
+                    if (int.TryParse(line, out int number))
+                    {
+                        numberList.Add(number); // Add valid numbers to the list
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid data: {line}");
+                    }
+                }
+
+                // Convert the list to an array
+                int[] numberArray = numberList.ToArray();
+
+                // Print the array to verify
+                Console.WriteLine("\nArray of numbers:");
+                foreach (int num in numberArray)
+                {
+                    Console.WriteLine(num);
+                }
             }
         }
     }
