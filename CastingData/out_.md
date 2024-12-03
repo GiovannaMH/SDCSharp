@@ -117,7 +117,7 @@ if (int.TryParse(line, out int number))
 
 ---
 
-### **8. Another example: **
+### **8. Another example:**
 In this example, we process the file twice: first, to find out how many elements are in the array (using `out _`), and second, to read the values from the file and put them in the array.
 ```
     static void Main(string[] args)
