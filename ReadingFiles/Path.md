@@ -15,7 +15,7 @@ Solution_name
 ```
 MyProject
 │
-├── **myNumbers.txt**     <- File you want to read
+├── myNumbers.txt     <- File you want to read
 ├── Program.cs        <- Your C# code
 ├── bin
 │   └── Debug
