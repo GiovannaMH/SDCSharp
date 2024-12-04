@@ -33,6 +33,6 @@ To read `myNumbers.txt` from the Solution folder, you can construct the path dyn
 string fileName = "../../../../myNumbers.txt"; // if the file is created in the Solution, to be accessible to all projects inside
 ```
 ### Testing It:
-1. Place `example.txt` in the **Solution folder**.
+1. Place `myNumbers.txt` in the **Solution folder**.
 2. Run the application.
 3. The file content should load correctly.
