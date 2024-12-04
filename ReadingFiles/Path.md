@@ -24,7 +24,7 @@ MyProject
 
 To read `myNumbers.txt` from the project folder, you can construct the path dynamically:
 ```csharp
-string fileName = "../../../emyNumbers.txt"; // if the file is created in the Project folder, where the .cs file is
+string fileName = "../../../myNumbers.txt"; // if the file is created in the Project folder, where the .cs file is
 ```
 ---
 
