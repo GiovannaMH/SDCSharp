@@ -28,9 +28,9 @@ string fileName = "../../../emyNumbers.txt"; // if the file is created in the Pr
 ```
 ---
 
-To read `example.txt` from the Solution folder, you can construct the path dynamically:
+To read `myNumbers.txt` from the Solution folder, you can construct the path dynamically:
 ```csharp
-string fileName = "../../../../example.txt"; // if the file is created in the Solution, to be accessible to all projects inside
+string fileName = "../../../../myNumbers.txt"; // if the file is created in the Solution, to be accessible to all projects inside
 ```
 ### Testing It:
 1. Place `example.txt` in the **Solution folder**.
