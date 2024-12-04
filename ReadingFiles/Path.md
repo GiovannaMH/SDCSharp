@@ -2,6 +2,16 @@
 Assume your project structure looks like this:
 
 ```
+SD_Arrays_Dec24
+|__Arrays1
+|__ReadingFiles1
+   |__bin
+      |__Debug
+         |__net7.0
+   	    |myNumbers.txt
+```
+
+```
 MyProject
 │
 ├── example.txt       <- File you want to read
