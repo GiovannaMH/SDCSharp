@@ -2,19 +2,20 @@
 Assume your project structure looks like this:
 
 ```
-SD_Arrays_Dec24
+Solution_name
 |__Arrays1
-|__ReadingFiles1
+|__ReadingFiles1               <- Your Project
+   |__Program.cs               <- Your C# code
    |__bin
       |__Debug
-         |__net7.0
-   	    |myNumbers.txt
+         |__netX.X             <- Where the compiled application runs
+   	      |__myNumbers.txt   <- File you want to read - the default path
 ```
 
 ```
 MyProject
 │
-├── example.txt       <- File you want to read
+├── **myNumbers.txt**     <- File you want to read
 ├── Program.cs        <- Your C# code
 ├── bin
 │   └── Debug
@@ -23,7 +24,7 @@ MyProject
 
 To read `example.txt` from the project folder, you can construct the path dynamically:
 ```csharp
-string fileName = "../../../example.txt"; // if the file is created in the Project folder, where the .cs file is
+string fileName = "../../../emyNumbers.txt"; // if the file is created in the Project folder, where the .cs file is
 ```
 ---
 
